@@ -1,5 +1,8 @@
 This project needs: \
 nodejs & npm https://nodejs.org/en/download \
+mysql https://dev.mysql.com/downloads/mysql/ \
+
+also create a database named 'hotelbooking' with tables 'hotels', 'rooms', 'reservations' and 'users'.\
 \
 To run the project: \
 1. npm install \
