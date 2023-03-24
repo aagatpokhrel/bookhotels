@@ -1,0 +1,44 @@
+/*Custom properties*/
+:root {
+    --footer-color : radial-gradient(circle at 18.7% 37.8%, #1d2026 0%, #21252c 90%); 
+    --background-color: #1d2026;
+    --text-color : white;
+    --button-color : #00986f;
+    --button-hover-color : #00a87f;
+    --font-size: 12px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+input[type="text"], input[type="password"], input[type="email"]{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color:var(--text-color);
+    color: var(--background-color);
+    width: 300px;
+}
+.text-container a {
+    text-decoration: none;
+    background: var(--button-color);
+    padding: 14px 40px;
+    display: inline-block;
+    color: var(--text-color);
+    font-size: 14px;
+    margin-top: 30px;
+    border-radius: 30px;
+    width: fit-content;
+}
+
+.text-container a:hover {
+    background: var(--button-hover-color);
+}
+
+hr {
+    width: 30%;
+}

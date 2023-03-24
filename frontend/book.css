@@ -1,0 +1,99 @@
+/*Custom properties*/
+:root {
+    --footer-color : radial-gradient(circle at 18.7% 37.8%, #1d2026 0%, #21252c 90%); 
+    --background-color: #1d2026;
+    --text-color : white;
+    --button-color : #00986f;
+    --button-hover-color : #00a87f;
+    --font-size: 12px;
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .booking-form h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group select,
+  .form-group input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2b2e38;
+    color: var(--text-color);
+  }
+  
+  .form-group input[type="range"] {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #2b2e38;
+    margin-top: 10px;
+  }
+  
+  .form-group input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--button-color);
+    cursor: pointer;
+  }
+  
+  .form-group input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--button-color);
+    cursor: pointer;
+  }
+  
+  .price-range {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  
+.price-range span {
+    font-size: var(--font-size);
+}
+  
+  .text-container a {
+    display: inline-block;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .text-container a:hover {
+    background-color: var(--button-hover-color);
+  }
+
+  #results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/*Custom properties*/
+:root {
+    --footer-color : radial-gradient(circle at 18.7% 37.8%, #1d2026 0%, #21252c 90%); 
+    --background-color: #1d2026;
+    --text-color : white;
+    --button-color : #00986f;
+    --button-hover-color : #00a87f;
+    --font-size: 12px;
+}
+
+/*Global Styles*/
+
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    background: var(--background-color);
+    min-height: 100vh;
+    width: 100%;
+    color: var(--text-color);
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+    background: var(--background-color);
+
+}
+
+nav .logo{
+    width: 160px;
+    height: 60px;
+    cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a{
+    text-decoration: none; /* This line of code will help us to remove the underline from the nav bar items.i.e. latest, modern.. haru bata underline hataune kam garxa. */
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--footer-color);
+    color: var(--text-color);
+    padding: 50px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .socials {
+    display: flex;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 20px;
+  }
+  
+  .contact,
+  .feedback {
+    flex-basis: 300px;
+  }
+  
+  .contact h3,
+  .feedback h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .contact p {
+    margin-bottom: 10px;
+  }
+  
+  .feedback form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .feedback label {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .feedback input,
+  .feedback textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .feedback textarea {
+    height: 100px;
+  }
+  
+  .feedback button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .feedback button:hover {
+    background-color: #ddd;
+  }
+
+.contact {
+    margin: 10px ;
+    /* left : 10px; */
+}
+
+.contact a {
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: double ;
+}
+
+/*Main Section */
+
+/*Main Section */
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .image-grid {
+    margin: 20px;
+    width: 60%;
+  }
+  
+  .hotel-img {
+    width: 100%;
+  }
+  
+  .description-grid {
+    margin: 20px;
+    max-width: 600px;
+  }
+  
+.description-grid h1{
+    font-size: 80px;
+    font-weight: 400;
+}
+.description-grid a{
+    text-decoration: none;
+    background: var(--button-color);
+    padding: 14px 40px;
+    display: inline-block;
+    color: var(--text-color);
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.description-grid a:hover{
+    background: var(--button-hover-color);
+}
+
+/* Testimonials section */
+
+.testimonials {
+    padding: 40px;
+  }
+
+  .testimonial-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* create grid columns with minimum width of 300px and maximum width of 1fr */
+    grid-gap: 30px;
+  }
+  
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+  }
+  .testimonial-text {
+    font-size: 12px;
+    /* font-style: italic; */
+    margin-bottom: 30px;
+  }
+  .testimonial-author{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-author img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-author h3{
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .testimonial-author span{
+    font-size: 12px;
+    /* font-weight: bold; */
+  }
+
+  @media (max-width: 768px) {
+    .testimonials {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* reduce minimum width to 250px on smaller screens */
+    }
+  }

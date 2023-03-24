@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Online Hotel Booking</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <a href="index.html"><img src="images/logo.png" class="logo"/></a> 
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="book.html" class="nav-link">Book</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="login.html" class="nav-link change">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="top-section">
+            <div class="image-grid">
+                <img src="images/hotel.jpg" class="hotel-img" />
+            </div>
+            <div class="description-grid">
+                <h1>
+                  Book Hotels
+                </h1>
+                <p>
+                  Book your favorite hotels according to the location, price, rooms and your specific taste.
+                </p>
+                <a href="book.html">See Reservations</a>
+            </div>
+        </div>
+      </section>
+      <br>
+      <section class="testimonials">
+        <h1>Testimonials</h1>
+        <br>
+        <div class="testimonial-container">
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>"I have used this platform to book hotels for my business travels and it has been a great experience so far. The process is quick and easy, and I always find good deals on hotels that fit my needs."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="images/user1.jpg" alt="User 1">
+              <h3>John Doe</h3>
+              <span>Business traveler</span>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-text">
+              <p>"I love how I can customize my search based on the amenities and location I want. The website is easy to navigate and I always find great options for my family vacations."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="images/user2.jpg" alt="User 2">
+              <h3>Jane Smith</h3>
+              <span>Leisure traveler</span>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="socials">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="contact">
+          <h3>Contact Us</h3>
+          <p>123 Main St, City</p>
+          <p>Phone: 555-555-5555</p>
+          <p>Email: info@hotelbooking.com</p>
+        </div>
+        <div class="feedback">
+          <h3>Send Feedback</h3>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </footer>       
+    <script src="main.js"></script>
+  </body>
+</html>

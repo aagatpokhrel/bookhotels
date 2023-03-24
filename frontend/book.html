@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Online Hotel Booking</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="book.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <a href="index.html"><img src="images/logo.png" class="logo"/></a> 
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="book.html" class="nav-link">Book</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="login.html" class="nav-link change">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="booking-form">
+        <h2>Find Your Ideal Hotel</h2>
+        <form id="search-form">
+          <div class="form-group">
+            <label for="location">Location:</label>
+            <select id="location" name="location">
+              <option value="">Select a Location</option>
+              <option value="new-york">New York</option>
+              <option value="los-angeles">Los Angeles</option>
+              <option value="san-francisco">San Francisco</option>
+              <option value="miami">Miami</option>
+              <option value="chicago">Chicago</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="range" id="price" name="price" min="50" max="500" value="250">
+            <div class="price-range">
+              <span>$50</span>
+              <span>Price :</span>
+              <span id="current-price">250</span>
+              <span>$500</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="standard">Standard:</label>
+            <select id="standard" name="standard">
+              <option value="">Select a Standard</option>
+              <option value="budget">Budget</option>
+              <option value="standard">Standard</option>
+              <option value="deluxe">Deluxe</option>
+              <option value="luxury">Luxury</option>
+            </select>
+          </div>
+          <div class="text-container">
+            <a href="#" onclick="searchHotels()">Search</a>
+          </div>
+        </form>
+      </section>
+      <section id="results">
+        <h2>Search Results</h2>
+        <div id="hotels-list"></div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
