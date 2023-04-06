@@ -10,3 +10,5 @@ To run the project:
 
 The frontend of the project will run at port 8000. Its not a good idea to share port and database attributes and keys. but i have shared nonetheless for educational purposes. 
 
+ad : hoteladmin
+pw : hoteladmin

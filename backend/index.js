@@ -8,13 +8,9 @@ import { book } from './controllers/book.js';
 import {pool} from './db.js';
 
 const app = express();
-
 app.use(cors())
 app.use(express.json())    // allows to accept json in the body of a request
 app.use(express.urlencoded({extended: true}))
-
-const port = 5000;
-
 
 
 app.get('/', (req, res) => {
@@ -31,6 +27,7 @@ app.post('/hotels', authenticateUser, search(pool));
 app.post('/book', authenticateUser, book(pool));
 
 // Start the server
+const port = 5000;
 app.listen(port, () => {
     console.log(`Hotel booking system listening at http://localhost:${port}`);
 });
