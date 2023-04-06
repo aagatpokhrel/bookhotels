@@ -1,0 +1,51 @@
+  #purchases {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+  }
+
+  #purchases h2 {
+    margin-bottom: 20px;
+  }
+
+  #purchase-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 20px;
+  }
+  
+  .hotel-item {
+    display: flex;
+    background-color: #2d313b;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hotel-item span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .hotel-item .price {
+    font-weight: normal;
+  }
+  
+  .total-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+  }
+  
+  .total-price span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

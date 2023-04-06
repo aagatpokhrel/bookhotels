@@ -90,10 +90,14 @@
     background-color: var(--button-hover-color);
   }
 
-  #results {
-    display: flex;
-    flex-wrap: wrap;
+  #purchase-container {
+    display: grid;
+    grid-template-columns: auto 200px;
+    gap: 50px;
+    /* align-items: center; */
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 100px;
   }
+
+  

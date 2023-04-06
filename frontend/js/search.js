@@ -1,19 +1,19 @@
 const bookHotelList = [];
 
 function renderHotels(data) {
-    hotelsList.innerHTML = ''; // Clear the current search results
     const hotelsList = document.getElementById('hotels-list');
-    data.forEach(hotel => {   
-        const hotelCard = createHotelCard(hotel);
+    hotelsList.innerHTML = ''; // Clear the current search results
+    data.forEach((hotel,i) => {   
+        const hotelCard = createHotelCard(hotel,i);
         hotelsList.appendChild(hotelCard);
   });
 }
 
-function createHotelCard(hotel) {
+function createHotelCard(hotel,i) {
   const hotelCard = document.createElement('div');
   hotelCard.classList.add('hotel-card');
   hotelCard.innerHTML = `
-    <img src="${hotel.image}" alt="${hotel.name}">
+    <img src="../images/room_${i}.jpg" alt="${hotel.name}">
     <div class="hotel-info">
       <h3>${hotel.name}</h3>
       <p><span>Location:</span> ${hotel.location}</p>
@@ -29,13 +29,15 @@ function createHotelCard(hotel) {
 function bookHotel(name) {
   bookHotelList.push(name);
   alert(`${name} has been added to your bookings.`);
+  displayBookList();
+  displayTotal();
 }
 
 function searchHotels() {
     const location = document.getElementById('location').value;
     const price = document.getElementById('price').value;
     const standard = document.getElementById('standard').value;
-    
+    console.log(location, price, standard);
     // Create an object containing the search criteria
     const searchCriteria = {
       location,
@@ -62,4 +64,38 @@ function searchHotels() {
     });
 }
 
+function displayBookList() {
+    const bookListContainer = document.querySelector("#purchase-list");
+    bookListContainer.innerHTML = "";
+    
+    bookHotelList.forEach((hotel) => {
+      const hotelItem = document.createElement("div");
+      hotelItem.classList.add("hotel-item");
+      
+      const hotelName = document.createElement("span");
+      hotelName.textContent = hotel.name;
+      
+      const hotelPrice = document.createElement("span");
+      hotelPrice.textContent = `$${hotel.price}`;
+      hotelPrice.classList.add("price");
+      
+      hotelItem.appendChild(hotelName);
+      hotelItem.appendChild(hotelPrice);
+      bookListContainer.appendChild(hotelItem);
+    });
+  }
+  
+  function displayTotal() {
+    const totalContainer = document.querySelector("total-price");
+    const totalPrice = bookHotelList.reduce((total, hotel) => total + hotel.price, 0);
+    
+    const totalText = document.createElement("span");
+    totalText.textContent = `Total: $${totalPrice}`;
+    
+    totalContainer.innerHTML = "";
+    totalContainer.appendChild(totalText);
+  }
+  
+  
+  
 
