@@ -5,6 +5,10 @@ document.getElementById('register-link').addEventListener('click', function(even
 function register(event) {
     event.preventDefault();
 
+    if (document.querySelector('.error')) {
+      document.querySelector('.error').remove();
+    }
+    
     const form = document.querySelector('form');
     const inputs = form.querySelectorAll('input');
 
@@ -22,7 +26,7 @@ function register(event) {
     })
     .then(response => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Username or email already exists');
       }
       return response.json();
     })
@@ -34,6 +38,7 @@ function register(event) {
       const messageContainer = document.createElement('div');
       messageContainer.classList.add('error');
       messageContainer.textContent = error.message;
+      messageContainer.style.color = 'red';
       form.prepend(messageContainer);
     });
 }

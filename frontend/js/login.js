@@ -5,7 +5,11 @@ document.getElementById('login-link').addEventListener('click', function(event) 
 
 function login(event) {
     event.preventDefault();
-    console.log('login');
+
+    if (document.querySelector('.error')) {
+        document.querySelector('.error').remove();
+    }
+
     const username = document.querySelector('input[type="text"]').value;
     const password = document.querySelector('input[type="password"]').value;
     
@@ -37,6 +41,7 @@ function login(event) {
         const messageContainer = document.createElement('div');
         messageContainer.classList.add('error');
         messageContainer.textContent = error.message;
+        messageContainer.style.color = 'red';
         form.prepend(messageContainer);
     });
 }
