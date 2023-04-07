@@ -12,22 +12,27 @@ function renderHotels(data) {
 function createHotelCard(hotel,i) {
   const hotelCard = document.createElement('div');
   hotelCard.classList.add('hotel-card');
+  console.log(hotel);
   hotelCard.innerHTML = `
     <img src="../images/room_${i}.jpg" alt="${hotel.name}">
     <div class="hotel-info">
       <h3>${hotel.name}</h3>
-      <p><span>Location:</span> ${hotel.location}</p>
+      <p><span>Location:</span> ${hotel.address}</p>
       <p><span>Price per night:</span> $${hotel.price}</p>
-      <p><span>Standard:</span> ${hotel.standard}</p>
-      <p><span>Description:</span> ${hotel.description}</p>
-      <button onclick="bookHotel('${hotel.name}')">Book Now</button>
+      <p><span>Standard:</span> ${hotel.room_type}</p>
+      <p><span>Phone Number:</span> ${hotel.phone_number}</p>
+      <button onclick="bookHotel('${hotel.name}', '${hotel.price}')">Book Now</button>
     </div>
   `;
   return hotelCard;
 }
 
-function bookHotel(name) {
-  bookHotelList.push(name);
+function bookHotel(name, price) {
+  data = {
+    name,
+    price
+  }
+  bookHotelList.push(data);
   alert(`${name} has been added to your bookings.`);
   displayBookList();
   displayTotal();
