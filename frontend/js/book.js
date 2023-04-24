@@ -84,15 +84,26 @@ function displayBookList() {
       hotelPrice.textContent = `$${hotel.price}`;
       hotelPrice.classList.add("price");
       
+      const cancelbtn = document.createElement("button");
+      cancelbtn.textContent = "Cancel";
+      cancelbtn.classList.add("cancel-btn");
+      cancelbtn.addEventListener("click", () => {
+        const index = bookHotelList.indexOf(hotel);
+        bookHotelList.splice(index, 1);
+        displayBookList();
+        displayTotal();
+      });
+
       hotelItem.appendChild(hotelName);
       hotelItem.appendChild(hotelPrice);
+      hotelItem.appendChild(cancelbtn);
       bookListContainer.appendChild(hotelItem);
     });
   }
   
   function displayTotal() {
-    const totalContainer = document.querySelector("total-price");
-    const totalPrice = bookHotelList.reduce((total, hotel) => total + hotel.price, 0);
+    const totalContainer = document.querySelector("#total-price");
+    const totalPrice = bookHotelList.reduce((total, hotel) => parseInt(total) + parseInt(hotel.price), 0);
     
     const totalText = document.createElement("span");
     totalText.textContent = `Total: $${totalPrice}`;

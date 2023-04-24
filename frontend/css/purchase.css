@@ -4,6 +4,7 @@
     align-items: center;
     flex-wrap: wrap;
     /* justify-content: center; */
+    padding-left: 20px;
   }
 
   #purchases h2 {
@@ -15,6 +16,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
     border-top: 20px;
+  }
+  .cancel-btn {
+    display: inline-block;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    padding-left: 20px;
+    margin-left: 10px;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .cancel-btn:hover {
+    background-color: var(--button-hover-color);
   }
   
   .hotel-item {
